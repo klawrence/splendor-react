@@ -8,6 +8,12 @@ class GameAPI {
     });
   }
 
+  static fetchGame(id) {
+    return fetch(`/games/${id}.json`).then(response => {
+      return response.json();
+    });
+  }
+
   static startGame() {
     return fetch('/games.json',
       {
