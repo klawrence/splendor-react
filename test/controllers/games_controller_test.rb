@@ -35,6 +35,7 @@ class GamesControllerTest < ActionDispatch::IntegrationTest
 
     assert_equal 4, json['players'].count
     assert_equal 3, json['cards_on_table'].count
+    assert_equal 6, json['gem_stacks'].count
   end
 
   test 'should destroy game' do
