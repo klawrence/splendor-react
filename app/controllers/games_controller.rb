@@ -1,11 +1,15 @@
 class GamesController < ApplicationController
-  before_action :set_game, only: [:show, :edit, :update, :destroy]
+  before_action :set_game, only: [:show, :update, :destroy]
 
   def index
     @names = repository.list
   end
 
   def show
+    respond_to do |format|
+      format.html { render :index }
+      format.json
+    end
   end
 
   def create
