@@ -1,7 +1,7 @@
 import React from 'react'
 import GameList from "../components/GameList";
 
-class GameListContainer extends React.Component {
+class GameIndexContainer extends React.Component {
   render() {
     return (
       <GameList games={['a', 'b']}/>
@@ -9,4 +9,4 @@ class GameListContainer extends React.Component {
   }
 }
 
-export default GameListContainer;
+export default GameIndexContainer;

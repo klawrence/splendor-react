@@ -1,7 +1,7 @@
 import React from 'react'
 import {Link} from "react-router-dom";
 
-const GameList = ({games}) => (
+const GameIndex = ({games}) => (
     <ul>
         {games.map((game) => (
             <li key={game}>
@@ -11,4 +11,4 @@ const GameList = ({games}) => (
     </ul>
 )
 
-export default GameList
+export default GameIndex
