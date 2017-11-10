@@ -2,11 +2,37 @@
 
 .card {
   display: inline-block;
-  color: #AAA;
-  height: 6em;
-  width: 4em;
+  position: relative;
+  color: white;
+  height: 11em;
+  width: 8em;
   padding: 0.5em;
   margin: 0.5em;
   border: solid 3px #333;
   border-radius: 5px;
+
+  .points {
+    font-size: 4em;
+    text-shadow: 2px 2px 0 #000;
+    text-align: center;
+    margin-bottom: 1em;
+    &.zero { visibility: hidden; }
+  }
+
+  .cost {
+    position: absolute;
+    bottom: 0.5em;
+  }
+  .gem {
+    display: inline-block;
+    text-shadow: 1px 1px 0 #000;
+    color: white;
+    height: 1em;
+    width: 1em;
+    padding: 0.1em;
+    margin: 0.1em;
+    text-align: center;
+    border: solid 3px #CCC;
+    border-radius: 1em;
+  }
 }

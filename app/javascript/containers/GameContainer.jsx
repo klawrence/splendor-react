@@ -29,9 +29,7 @@ class GameContainer extends React.Component {
 
   render() {
     return (
-      <div className="game-index">
-        <Game game={this.state.game} />
-      </div>
+      <Game game={this.state.game} />
     )
   }
 }
