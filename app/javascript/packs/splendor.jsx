@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import {BrowserRouter, Route} from 'react-router-dom'
 import Game from "../components/Game";
-import GameListContainer from "../containers/GameListContainer";
+import GameListContainer from "../containers/GameIndexContainer";
 
 const Splendor = props => (
   <BrowserRouter>
