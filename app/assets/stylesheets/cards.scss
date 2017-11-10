@@ -5,16 +5,16 @@
   position: relative;
   color: white;
   height: 11em;
-  width: 8em;
-  padding: 0.5em;
+  width: 7em;
+  padding: 0 0.5em;
   margin: 0.5em;
   border: solid 3px #333;
   border-radius: 5px;
 
   .points {
-    font-size: 4em;
+    font-size: 3em;
     text-shadow: 2px 2px 0 #000;
-    text-align: center;
+    text-align: left;
     margin-bottom: 1em;
     &.zero { visibility: hidden; }
   }
