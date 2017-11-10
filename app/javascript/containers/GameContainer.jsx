@@ -12,8 +12,8 @@ class GameContainer extends React.Component {
       id: props.match.params.id,
       game: {
         players: [],
-        cards_on_table: [],
-        gem_stacks: {}
+        cards: [],
+        gems: {}
       }
     };
   }
