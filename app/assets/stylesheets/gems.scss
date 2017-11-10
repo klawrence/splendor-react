@@ -3,5 +3,21 @@
 .emerald { background-color: green; }
 .sapphire { background-color: blue; }
 .onyx { background-color: #404; }
+.gold { background-color: gold; }
 
+.gem-stacks {
+  font-size: 3em;
+}
 
+.gem {
+  display: inline-block;
+  text-shadow: 1px 1px 0 #000;
+  color: white;
+  height: 1em;
+  width: 1em;
+  padding: 0.1em;
+  margin: 0.1em;
+  text-align: center;
+  border: solid 3px #CCC;
+  border-radius: 1em;
+}
