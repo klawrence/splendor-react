@@ -2,11 +2,11 @@ import React from 'react'
 import Player from "./Player";
 import Card from "./Card";
 
-const CardLevel = props => (
+const CardLevel = ({cards, level}) => (
   <div className="level">
-     <h4>Level {props.level}</h4>
+     <h4>Level {level}</h4>
       {
-        props.cards.map( (card, index) => (
+        cards.map( (card, index) => (
            <Card key={index} card={card} />
         ))
       }

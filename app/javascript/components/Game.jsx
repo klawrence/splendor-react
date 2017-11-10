@@ -2,10 +2,10 @@ import React from 'react'
 import PlayerList from "./PlayerList";
 import CardsOnTable from "./CardsOnTable";
 
-const Game = props => (
+const Game = ({game}) => (
   <div className="game">
-    <CardsOnTable cards={props.game.cards_on_table}/>
-    <PlayerList players={props.game.players}/>
+    <CardsOnTable cards={game.cards_on_table}/>
+    <PlayerList players={game.players}/>
   </div>
 )
 

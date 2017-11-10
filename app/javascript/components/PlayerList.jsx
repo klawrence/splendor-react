@@ -1,12 +1,12 @@
 import React from 'react'
 import Player from "./Player";
 
-const PlayerList = props => (
+const PlayerList = ({players}) => (
   <div className="players">
     <h3>Players</h3>
     <ul>
       {
-        props.players.map( (player) => (
+        players.map( (player) => (
           <li key={player.name}><Player player={player} /></li>
         ))
       }
