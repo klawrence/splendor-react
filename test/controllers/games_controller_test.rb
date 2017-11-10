@@ -2,43 +2,35 @@ require 'test_helper'
 
 class GamesControllerTest < ActionDispatch::IntegrationTest
   setup do
-    @games = GameRepository.new
+    @repository = GameRepository.instance
+    @repository.start_game
   end
 
   test 'should get index' do
-    get games_url
+    get games_url(format: :json)
     assert_response :success
+    json = JSON.parse response.body
+
+    assert_equal 1, json.count
+    assert_equal 'game 1', json.first['name']
+    assert_equal '/games/game-1', json.first['url']
   end
 
-  test "should get new" do
-    get new_game_url
-    assert_response :success
-  end
-
-  test "should create game" do
-    assert_difference('Game.count') do
-      post games_url, params: { game: {  } }
+  test 'should create game' do
+    assert_difference('@repository.count') do
+      post games_url(format: :json)
     end
-
-    assert_redirected_to game_url(Game.last)
   end
 
-  test "should show game" do
-    get game_url(@game)
+  test 'should show game' do
+    get game_url('game-1', format: :json)
     assert_response :success
+    json = JSON.parse response.body
+
+    assert_equal 4, json['players'].count
   end
 
-  test "should get edit" do
-    get edit_game_url(@game)
-    assert_response :success
-  end
-
-  test "should update game" do
-    patch game_url(@game), params: { game: {  } }
-    assert_redirected_to game_url(@game)
-  end
-
-  test "should destroy game" do
+  test 'should destroy game' do
     assert_difference('Game.count', -1) do
       delete game_url(@game)
     end

@@ -1,1 +1,4 @@
-json.array! @games, partial: 'games/game', as: :game
+json.array! @names do |name|
+  json.name name
+  json.url game_path(name)
+end
