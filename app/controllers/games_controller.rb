@@ -19,7 +19,7 @@ class GamesController < ApplicationController
   end
 
   def destroy
-    repository.destroy_game @game
+    repository.delete params[:id]
     head :no_content
   end
 

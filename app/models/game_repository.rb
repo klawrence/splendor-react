@@ -7,6 +7,10 @@ class GameRepository
     @games = {}
   end
 
+  def clear
+    @games.clear
+  end
+
   def count
     @games.count
   end
@@ -19,6 +23,10 @@ class GameRepository
     game = @games[name]
     raise ActiveRecord::RecordNotFound.new("Can't find game #{name}") unless game
     game
+  end
+
+  def delete name
+    @games.delete name
   end
 
   def start_game

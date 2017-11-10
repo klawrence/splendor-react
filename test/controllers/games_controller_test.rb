@@ -3,6 +3,7 @@ require 'test_helper'
 class GamesControllerTest < ActionDispatch::IntegrationTest
   setup do
     @repository = GameRepository.instance
+    @repository.clear
     @repository.start_game
   end
 
@@ -12,7 +13,7 @@ class GamesControllerTest < ActionDispatch::IntegrationTest
     json = JSON.parse response.body
 
     assert_equal 1, json.count
-    assert_equal 'game 1', json.first['name']
+    assert_equal 'game-1', json.first['name']
     assert_equal '/games/game-1', json.first['url']
   end
 
@@ -31,10 +32,10 @@ class GamesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'should destroy game' do
-    assert_difference('Game.count', -1) do
-      delete game_url(@game)
+    assert_difference('@repository.count', -1) do
+      delete game_url('game-1', format: :json)
     end
 
-    assert_redirected_to games_url
+    assert_response :no_content
   end
 end
