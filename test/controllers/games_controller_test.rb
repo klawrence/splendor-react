@@ -7,7 +7,12 @@ class GamesControllerTest < ActionDispatch::IntegrationTest
     @repository.start_game
   end
 
-  test 'should get index' do
+  test 'should load react app' do
+    get games_url()
+    assert_response :success
+  end
+
+  test 'should get list of games' do
     get games_url(format: :json)
     assert_response :success
     json = JSON.parse response.body
