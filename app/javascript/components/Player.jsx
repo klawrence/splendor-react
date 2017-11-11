@@ -5,7 +5,7 @@ import ActionButton from "./ui/ActionButton";
 
 const Player = ({player, actions}) => (
   <div className={`player ${player.my_turn ? 'my-turn' : ''}`}>
-      <h4>{player.name}</h4>
+      <h2>{player.name}</h2>
       <div className="points">{player.points}</div>
       <GemStacks gems={player.gems} />
       <CardStacks cards={player.cards} />

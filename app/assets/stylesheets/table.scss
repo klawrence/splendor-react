@@ -5,7 +5,7 @@
   background-color: $tableBackground;
   width: $tableWidth;
   padding: $inset;
-  margin-bottom: $inset;
+  margin: $inset 0;
   border: solid 1em $tableBorderColor;
   border-radius: $borderRadius;
   text-align: center;

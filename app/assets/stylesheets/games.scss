@@ -1,5 +1,24 @@
-@import 'colors';
+@import 'layout';
+
+#splendor {
+  background: linear-gradient(to bottom, $gameBackgroundDark 0%, $gameBackgroundLight 100%);
+  min-height: 2000px;
+}
 
 .game {
-    background: linear-gradient(to bottom, $gameBackgroundDark 0%, $gameBackgroundLight 100%);
+}
+
+.game-index {
+  background-color: $tableBackground;
+  width: $tableWidth;
+  padding: $inset;
+  margin: $inset auto;
+  border: solid 1em $tableBorderColor;
+  border-radius: $borderRadius;
+  a {color: $textColor;}
+
+  ul {
+    list-style: none;
+    font-size: 2em;
+  }
 }
