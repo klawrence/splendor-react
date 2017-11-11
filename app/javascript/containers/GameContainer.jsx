@@ -13,6 +13,7 @@ class GameContainer extends React.Component {
       game: {
         players: [],
         cards: [],
+        nobles: [],
         gems: {}
       }
     };

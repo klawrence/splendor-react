@@ -8,7 +8,7 @@ const Game = ({game, actions}) => (
   <div className="game">
     <Header onNextTurn={actions.onNextTurn} />
     <PlayerList players={game.players} />
-    <Table cards={game.cards} gems={game.gems} />
+    <Table cards={game.cards} gems={game.gems} nobles={game.nobles} />
   </div>
 )
 
