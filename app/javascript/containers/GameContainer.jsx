@@ -8,6 +8,8 @@ class GameContainer extends React.Component {
   constructor(props) {
     super(props);
 
+    this.bindActions();
+
     this.state = {
       id: props.match.params.id,
       game: {
@@ -17,6 +19,10 @@ class GameContainer extends React.Component {
         gems: {}
       }
     };
+  }
+
+  bindActions() {
+    this.onNextTurn = this.onNextTurn.bind(this);
   }
 
   componentDidMount() {
@@ -30,12 +36,12 @@ class GameContainer extends React.Component {
   }
 
   onNextTurn() {
-    GameAPI.sendAction({action: 'NEXT TURN' }).then((_status) => {
+    GameAPI.sendAction(this.state.id, {action: 'NEXT TURN' }).then((_status) => {
       this.fetchGame();
     });
   }
 
-  actionHandlers() {
+  actions() {
     return {
       onNextTurn: this.onNextTurn,
     };
@@ -43,7 +49,7 @@ class GameContainer extends React.Component {
 
   render() {
     return (
-      <Game game={this.state.game} actions={this.actionHandlers()} />
+      <Game game={this.state.game} actions={this.actions()} />
     )
   }
 }

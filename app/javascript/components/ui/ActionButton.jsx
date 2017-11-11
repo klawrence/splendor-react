@@ -1,7 +1,7 @@
 import React from 'react'
 
-const ActionButton = ({label, handler}) => (
-  <div className="button" onClick={handler}>{label}</div>
+const ActionButton = ({label, action}) => (
+  <div className="button" onClick={action}>{label}</div>
 )
 
 export default ActionButton

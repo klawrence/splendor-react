@@ -25,6 +25,18 @@ class GameAPI {
     });
   }
 
+  static sendAction(id, action) {
+    return fetch(`/games/${id}.json`,
+      {
+        method: "PUT",
+        headers: defaultHeaders(),
+        body: action
+      }
+    ).then(response => {
+      return response.json();
+    });
+  }
+
 }
 
 export default GameAPI
