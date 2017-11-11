@@ -4,7 +4,7 @@ import Card from "./Card";
 
 const CardLevel = ({cards, level}) => (
   <div className="level">
-     <h4>Level {level}</h4>
+     <h3>Level {level}</h3>
       {
         cards.map( (card, index) => (
            <Card key={index} card={card} />

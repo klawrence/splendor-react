@@ -1,0 +1,15 @@
+@import 'layout';
+
+.table {
+  display: inline-block;
+  background-color: #EEE;
+  width: $tableWidth;
+  padding: $inset;
+  border: solid 1em #f7da45;
+  border-radius: $borderRadius;
+  text-align: center;
+
+  .level {
+    margin: $inset;
+  }
+}

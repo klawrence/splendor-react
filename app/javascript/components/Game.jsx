@@ -1,13 +1,14 @@
 import React from 'react'
 import PlayerList from "./PlayerList";
-import CardsOnTable from "./CardsOnTable";
+import Table from "./Table";
 import GemStacks from "./GemStacks";
+import Header from "./Header";
 
-const Game = ({game}) => (
+const Game = ({game, actions}) => (
   <div className="game">
-    <PlayerList players={game.players}/>
-    <CardsOnTable cards={game.cards}/>
-    <GemStacks gems={game.gems}/>
+    <Header onNextTurn={actions.onNextTurn} />
+    <PlayerList players={game.players} />
+    <Table cards={game.cards} gems={game.gems} />
   </div>
 )
 

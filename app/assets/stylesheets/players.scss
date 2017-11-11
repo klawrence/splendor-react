@@ -1,14 +1,20 @@
-.players {
-  float: right;
-}
-.player {
-  width: 20em;
-  margin: 1em;
-  padding: 1em;
-  border: solid 1px #666;
-  border-radius: 1em;
+@import 'layout';
+@import 'colors';
 
-  &.my-turn {
-    background-color: #FDD;
-  }
+.players {
+  h3 { color: $headerColor; }
+  display: inline-block;
+  vertical-align: top;
+  padding: $inset;
+}
+
+.player {
+  width: $playerWidth;
+  margin: $inset;
+  padding: $inset;
+  border: $border;
+  border-radius: $borderRadius;
+  background-color: $playerbackground;
+
+  &.my-turn {  background-color: $myTurnbackground;  }
 }

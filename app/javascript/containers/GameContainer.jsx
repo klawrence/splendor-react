@@ -28,9 +28,21 @@ class GameContainer extends React.Component {
     });
   }
 
+  onNextTurn() {
+    GameAPI.sendAction({action: 'NEXT TURN' }).then((_status) => {
+      this.fetchGame();
+    });
+  }
+
+  actionHandlers() {
+    return {
+      onNextTurn: this.onNextTurn,
+    };
+  }
+
   render() {
     return (
-      <Game game={this.state.game} />
+      <Game game={this.state.game} actions={this.actionHandlers()} />
     )
   }
 }
