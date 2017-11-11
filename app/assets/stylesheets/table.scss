@@ -2,7 +2,7 @@
 
 .table {
   display: inline-block;
-  background-color: #EEE;
+  background-color: $tableBackground;
   width: $tableWidth;
   padding: $inset;
   border: solid 1em $tableBorderColor;

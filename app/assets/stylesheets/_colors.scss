@@ -1,13 +1,40 @@
 $golden: #f7da45;
 
-$borderBackground: white;
-$headerColor: white;
+$diamond: white;
+$ruby: red;
+$emerald: green;
+$sapphire: blue;
+$onyx: #404;
+$gold: gold;
 
-$buttonBackground: $golden;
+
+$headerColor: white;
+$linkColor: white;
+
+$borderBackground: white;
+
+$gameBackgroundDark: #1e5799;
+$gameBackgroundLight: #7db9e8;
+
+$buttonBackground: white;
+$buttonBackgroundHover: $gold;
+$buttonBackgroundActive: $ruby;
+$buttonBorder: $gold;
 
 $playerbackground: #DDD;
 $myTurnbackground: #FDD;
 
+$tableBackground: #EEE;
 $tableBorderColor: $golden;
 
+$cardBorder: #333;
+
 $nobleBackground: $golden;
+
+$cardTextShadow: #000;
+
+$gemTextColor: white;
+$gemTextShadow: #000;
+$gemTextBorder: #CCC;
+
+

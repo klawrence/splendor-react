@@ -1,0 +1,5 @@
+@import 'colors';
+
+.game {
+    background: linear-gradient(to bottom, $gameBackgroundDark 0%, $gameBackgroundLight 100%);
+}

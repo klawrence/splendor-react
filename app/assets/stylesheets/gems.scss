@@ -1,9 +1,11 @@
-.diamond { background-color: white; }
-.ruby { background-color: red; }
-.emerald { background-color: green; }
-.sapphire { background-color: blue; }
-.onyx { background-color: #404; }
-.gold { background-color: gold; }
+@import 'colors';
+
+.diamond { background-color: $diamond; }
+.ruby { background-color: $ruby; }
+.emerald { background-color: $emerald; }
+.sapphire { background-color: $sapphire; }
+.onyx { background-color: $onyx; }
+.gold { background-color: $gold; }
 
 .gem-stacks {
   font-size: 3em;
@@ -11,13 +13,13 @@
 
 .gem {
   display: inline-block;
-  text-shadow: 1px 1px 0 #000;
-  color: white;
+  text-shadow: 1px 1px 0 $gemTextShadow;
+  color: $gemTextColor;
   height: 1em;
   width: 1em;
   padding: 0.1em;
   margin: 0.1em;
   text-align: center;
-  border: solid 3px #CCC;
+  border: solid 3px $gemTextBorder;
   border-radius: 1em;
 }

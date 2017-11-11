@@ -5,7 +5,11 @@
   display: inline-block;
   padding: 0.2em 0.5em;
   text-align: center;
-  background-color: $buttonBackground;
-  border: solid 1px ;
+  border: solid 1px $buttonBorder;
   border-radius: 0.5em;
+  cursor: pointer;
+
+  background-color: $buttonBackground;
+  &:hover {  background-color: $buttonBackgroundHover;  }
+  &:active {  background-color: $buttonBackgroundActive;  }
 }

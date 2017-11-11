@@ -9,14 +9,14 @@
   width: 7em;
   padding: 0 0.5em;
   margin: 0.5em;
-  border: solid 3px #333;
+  border: solid 3px $cardBorder;
   border-radius: 1em;
 
   .points {
     font-family: $cursive;
     font-size: 2em;
     line-height: 1;
-    text-shadow: 2px 2px 0 #000;
+    text-shadow: 2px 2px 0 $cardTextShadow;
     text-align: left;
 
     &.zero { visibility: hidden; }

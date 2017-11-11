@@ -20,11 +20,7 @@
     padding: $inset;
     text-align: right;
 
-    > * {
-      margin: 0 $inset;
-    }
-    a {
-      display: inline-block;
-    }
+    > * {  margin: 0 $inset;  }
+    a {  display: inline-block;  }
   }
 }
