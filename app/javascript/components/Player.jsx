@@ -1,8 +1,13 @@
 import React from 'react'
+import GemStacks from "./GemStacks";
+import CardStacks from "./CardStacks";
 
-const Player = props => (
+const Player = ({player}) => (
   <div className="player">
-    <h4>{props.player.name}</h4>
+    <h4>{player.name}</h4>
+    <div className="points">{player.points}</div>
+    <CardStacks cards={player.cards} />
+    <GemStacks gems={player.gems} />
   </div>
 )
 
