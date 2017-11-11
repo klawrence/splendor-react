@@ -1,0 +1,11 @@
+@import 'colors';
+@import 'fonts';
+
+.button {
+  display: inline-block;
+  padding: 0.2em 0.5em;
+  text-align: center;
+  background-color: $buttonBackground;
+  border: solid 1px ;
+  border-radius: 0.5em;
+}

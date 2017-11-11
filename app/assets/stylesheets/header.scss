@@ -1,5 +1,30 @@
-@import 'colors';
+@import 'layout';
+@import 'fonts';
 
 .header {
-  height: 3em;
+  padding: $inset;
+  position: relative;
+
+  h1 {
+    color: $headerColor;
+    font-family: $cursive;
+    width: 8em;
+  }
+
+  .options {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    width: 20em;
+    padding: $inset;
+    text-align: right;
+
+    > * {
+      margin: 0 $inset;
+    }
+    a {
+      display: inline-block;
+    }
+  }
 }

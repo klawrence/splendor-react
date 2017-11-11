@@ -1,11 +1,11 @@
 @import 'layout';
-@import 'colors';
 
 .players {
-  h3 { color: $headerColor; }
   display: inline-block;
   vertical-align: top;
   padding: $inset;
+
+  h3 {  color: $headerColor;  }
 }
 
 .player {
