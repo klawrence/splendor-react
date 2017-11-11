@@ -1,11 +1,11 @@
 import React from 'react'
-import Player from "./Player";
+import {mapHash} from "../utils/mapHash";
 
 const CardStacks = ({cards}) => (
   <div className='card-stacks' >
     {
-      Object.keys(cards).map( (gem) => (
-        <div key={gem} className={`stack ${gem}`}>{cards[gem].count}</div>
+      mapHash(cards, (gem, count) => (
+        <div key={gem} className={`stack ${gem}`}>{count}</div>
       ))
     }
   </div>
