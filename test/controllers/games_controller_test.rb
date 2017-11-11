@@ -45,8 +45,8 @@ class GamesControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
     json = JSON.parse response.body
 
-    assert json['players'].first[:my_turn]
-    refute json['players'].second[:my_turn]
+    assert json['players'].first['my_turn']
+    refute json['players'].second['my_turn']
   end
 
   test 'should destroy game' do
