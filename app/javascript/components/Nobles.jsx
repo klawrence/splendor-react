@@ -5,7 +5,7 @@ const Nobles = ({nobles}) => (
   <div className='nobles' >
     {
       nobles.map( (noble, index) => (
-        <Card key={index} card={noble} />
+        <Card key={index} card={noble} type="noble"/>
       ))
     }
   </div>

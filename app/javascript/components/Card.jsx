@@ -2,8 +2,8 @@ import React from 'react'
 import Gem from "./Gem";
 import {mapHash} from "../utils/collections";
 
-const Card = ({card}) => (
-  <div className={`card ${card.gem}`} >
+const Card = ({card, type}) => (
+  <div className={`card ${type || card.gem}`} >
     <div className={`points ${card.points === 0 ? 'zero' : ''}`}>{card.points}</div>
     <div className="cost">
       {
