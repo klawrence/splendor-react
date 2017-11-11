@@ -15,12 +15,12 @@ class GameRepository
     @games.count
   end
 
-  def list
-    @games.keys
+  def all
+    @games.values
   end
 
   def find name
-    game = @games[name]
+    game = @games[name.parameterize]
     raise ActiveRecord::RecordNotFound.new("Can't find game #{name}") unless game
     game
   end
@@ -30,8 +30,9 @@ class GameRepository
   end
 
   def start_game
-    name = "game-#{@games.count + 1}"
-    @games[name] = Splendor::Game.new
+    game = Splendor::Game.new
+    game.name = "game #{@games.count + 1}"
+    @games[game.to_param] = game
   end
 
 end

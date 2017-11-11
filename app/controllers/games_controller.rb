@@ -2,7 +2,7 @@ class GamesController < ApplicationController
   before_action :set_game, only: [:show, :update, :destroy]
 
   def index
-    @names = repository.list
+    @games = repository.all
   end
 
   def show

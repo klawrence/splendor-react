@@ -4,7 +4,7 @@ class GamesControllerTest < ActionDispatch::IntegrationTest
   setup do
     @repository = GameRepository.instance
     @repository.clear
-    @repository.start_game
+    @game = @repository.start_game
   end
 
   test 'should load react app' do
@@ -18,7 +18,7 @@ class GamesControllerTest < ActionDispatch::IntegrationTest
     json = JSON.parse response.body
 
     assert_equal 1, json.count
-    assert_equal 'game-1', json.first['name']
+    assert_equal 'game 1', json.first['name']
     assert_equal '/games/game-1', json.first['url']
   end
 
@@ -29,7 +29,7 @@ class GamesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'should show game' do
-    get game_url('game-1', format: :json)
+    get game_url(@game, format: :json)
     assert_response :success
     json = JSON.parse response.body
 
@@ -38,9 +38,20 @@ class GamesControllerTest < ActionDispatch::IntegrationTest
     assert_equal 6, json['gems'].count
   end
 
+  test 'should show whose turn it is' do
+    assert_equal @game.players.first, @game.next_player
+
+    get game_url(@game, format: :json)
+    assert_response :success
+    json = JSON.parse response.body
+
+    assert json['players'].first[:my_turn]
+    refute json['players'].second[:my_turn]
+  end
+
   test 'should destroy game' do
     assert_difference('@repository.count', -1) do
-      delete game_url('game-1', format: :json)
+      delete game_url(@game, format: :json)
     end
 
     assert_response :no_content

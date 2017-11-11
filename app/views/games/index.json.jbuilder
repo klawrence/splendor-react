@@ -1,4 +1,4 @@
-json.array! @names do |name|
-  json.name name
-  json.url game_path(name)
+json.array! @games do |game|
+  json.extract! game, :name
+  json.url game_path(game)
 end
