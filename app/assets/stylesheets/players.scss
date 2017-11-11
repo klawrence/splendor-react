@@ -17,11 +17,30 @@
   background-color: $playerbackground;
 
   &.my-turn {  background-color: $myTurnbackground;  }
-  .actions {  text-align: right;  }
+  .actions {
+    min-height: 2em;
+    text-align: right;
+  }
+
   .card-stacks {
     font-size: 1.5em;
     min-height: 2em;
+
+    .stack {
+      display: inline-block;
+      color: white;
+      padding: 0.5em;
+      margin: 0.2em;
+      border: solid 3px $cardBorder;
+      border-radius: 0.2em;
+
+      font-family: $cursive;
+      line-height: 1;
+      text-shadow: 2px 2px 0 $cardTextShadow;
+      text-align: center;
+    }
   }
+
   .gem-stacks {
     font-size: 1.5em;
     min-height: 2em;

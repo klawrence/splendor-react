@@ -15,10 +15,15 @@
   margin: $inset auto;
   border: solid 1em $tableBorderColor;
   border-radius: $borderRadius;
+
   a {color: $textColor;}
 
   ul {
     list-style: none;
     font-size: 2em;
+  }
+
+  .new-game {
+    text-align: center;
   }
 }

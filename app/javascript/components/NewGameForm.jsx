@@ -1,8 +1,9 @@
 import React from 'react'
+import ActionButton from "./ui/ActionButton";
 
 const NewGameForm = props => (
   <div className="new-game">
-    <button onClick={props.onClick}>start a new game</button>
+    <ActionButton action={props.onClick} label="start a new game" />
   </div>
 )
 

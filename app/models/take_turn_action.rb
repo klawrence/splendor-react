@@ -13,6 +13,7 @@ class TakeTurnAction
     end
 
     gems = game.gems.
+        reject{|gem, _cost| gem == :gold}.
         sort_by {|_gem, count| count}.
         reverse[0..2].
         map(&:first)

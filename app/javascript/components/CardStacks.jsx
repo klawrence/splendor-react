@@ -1,11 +1,11 @@
 import React from 'react'
 import {mapHash} from "../utils/collections";
 
-const CardStacks = ({cards}) => (
+const CardStacks = ({stacks}) => (
   <div className='card-stacks' >
     {
-      mapHash(cards, (gem, count) => (
-        <div key={gem} className={`stack ${gem}`}>{count}</div>
+      mapHash(stacks, (gem, stack) => (
+        <div key={gem} className={`stack ${gem}`}>{stack.length}</div>
       ))
     }
   </div>
