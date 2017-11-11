@@ -1,5 +1,5 @@
 import React from 'react'
-import {mapHash} from "../utils/mapHash";
+import {mapHash} from "../utils/collections";
 
 const CardStacks = ({cards}) => (
   <div className='card-stacks' >

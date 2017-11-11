@@ -1,6 +1,6 @@
 import React from 'react'
 import Gem from "./Gem";
-import {mapHash} from "../utils/mapHash";
+import {mapHash} from "../utils/collections";
 
 const Card = ({card}) => (
   <div className={`card ${card.gem}`} >
@@ -8,7 +8,7 @@ const Card = ({card}) => (
     <div className="cost">
       {
         mapHash(card.cost.gems, (gem, cost) => (
-            <Gem key={gem} gem={gem} amount={cost} />
+            <Gem key={gem} gem={gem} count={cost} />
           )
         )
       }
