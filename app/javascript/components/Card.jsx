@@ -1,5 +1,6 @@
 import React from 'react'
 import Player from "./Player";
+import Gem from "./Gem";
 
 const Card = ({card}) => (
   <div className={`card ${card.gem}`} >
@@ -7,7 +8,7 @@ const Card = ({card}) => (
     <div className="cost">
       {
         Object.keys(card.cost.gems).map( (gem) => (
-          <div key={gem} className={`gem ${gem}`}>{card.cost.gems[gem]}</div>
+          <Gem key={gem} gem={gem} amount={card.cost.gems[gem]} />
         ))
       }
     </div>
