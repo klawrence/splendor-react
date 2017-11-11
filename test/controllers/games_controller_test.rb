@@ -36,6 +36,7 @@ class GamesControllerTest < ActionDispatch::IntegrationTest
     assert_equal 4, json['players'].count
     assert_equal 3, json['cards'].count
     assert_equal 6, json['gems'].count
+    assert_equal 5, json['nobles'].count
   end
 
   test 'should show whose turn it is' do
