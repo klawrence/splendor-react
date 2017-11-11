@@ -1,5 +1,5 @@
 import React from 'react'
-import Player from "./Player";
+import {mapHash} from "../utils/collections";
 
 const GemStacks = ({gems}) => (
   <div className='gem-stacks' >
