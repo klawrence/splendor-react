@@ -1,14 +1,20 @@
 import React from 'react'
 import GemStacks from "./GemStacks";
 import CardStacks from "./CardStacks";
+import ActionButton from "./ui/ActionButton";
 
-const Player = ({player}) => (
+const Player = ({player, actions}) => (
   <div className={`player ${player.my_turn ? 'my-turn' : ''}`}>
-    <h4>{player.name}</h4>
-    <div className="points">{player.points}</div>
-    <CardStacks cards={player.cards} />
-    <GemStacks gems={player.gems} />
+      <h4>{player.name}</h4>
+      <div className="points">{player.points}</div>
+      <GemStacks gems={player.gems} />
+      <CardStacks cards={player.cards} />
+
+      <div className="actions">
+        {player.my_turn && <ActionButton action={actions.takeTurn} label="take turn" />}
+      </div>
   </div>
 )
+
 
 export default Player

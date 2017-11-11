@@ -22,7 +22,7 @@ class GameContainer extends React.Component {
   }
 
   bindActions() {
-    this.onNextTurn = this.onNextTurn.bind(this);
+    this.onTakeTurn = this.onTakeTurn.bind(this);
   }
 
   componentDidMount() {
@@ -35,15 +35,15 @@ class GameContainer extends React.Component {
     });
   }
 
-  onNextTurn() {
-    GameAPI.sendAction(this.state.id, {action: 'NEXT TURN' }).then((_status) => {
+  onTakeTurn() {
+    GameAPI.sendAction(this.state.id, {action: 'TAKE TURN' }).then((_status) => {
       this.fetchGame();
     });
   }
 
   actions() {
     return {
-      onNextTurn: this.onNextTurn,
+      takeTurn: this.onTakeTurn,
     };
   }
 

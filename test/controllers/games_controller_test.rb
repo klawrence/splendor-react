@@ -40,7 +40,7 @@ class GamesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'should show whose turn it is' do
-    assert_equal @game.players.first, @game.next_player
+    assert_equal @game.players.first, @game.current_player
 
     get game_url(@game, format: :json)
     assert_response :success
