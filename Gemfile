@@ -5,7 +5,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-gem 'splendor'
+gem 'splendor', git: 'https://github.com/klawrence/splendor.git'
 
 gem 'rails', '~> 5.1.4'
 gem 'sqlite3'
