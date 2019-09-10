@@ -7,7 +7,7 @@ end
 
 gem 'splendor', git: 'https://github.com/klawrence/splendor.git'
 
-gem 'rails', '~> 5.1.4'
+gem 'rails', '> 5.2'
 gem 'sqlite3', '~> 1.3', '< 1.4'
 gem 'puma', '~> 3.7'
 gem 'sass-rails', '~> 5.0'
