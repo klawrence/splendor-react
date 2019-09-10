@@ -7,7 +7,7 @@ end
 
 gem 'splendor', git: 'https://github.com/klawrence/splendor.git'
 
-gem 'rails', '> 5.2'
+gem 'rails', '~> 5.2.3'
 gem 'sqlite3', '~> 1.3', '< 1.4'
 gem 'puma', '~> 3.7'
 gem 'sass-rails', '~> 5.0'
@@ -22,7 +22,7 @@ group :development, :test do
 end
 
 group :development do
-  gem 'web-console', '>= 3.3.0'
+  gem 'web-console'
   gem 'listen', '>= 3.0.5', '< 3.2'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
