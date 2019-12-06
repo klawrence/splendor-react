@@ -9,7 +9,7 @@ gem 'splendor', git: 'https://github.com/klawrence/splendor.git'
 
 gem 'rails', '~> 5.2.3'
 gem 'sqlite3', '~> 1.3', '< 1.4'
-gem 'puma', '~> 3.7'
+gem 'puma', '~> 3.12'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'webpacker'
